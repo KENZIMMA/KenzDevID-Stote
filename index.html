@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KenzDevID - Panel Hosting Berkualitas</title>
+    <style>
+        :root {
+            --primary: #6c5ce7;
+            --secondary: #a29bfe;
+            --dark: #2d3436;
+            --light: #f5f6fa;
+            --success: #00b894;
+            --warning: #fdcb6e;
+            --danger: #d63031;
+            --whatsapp: #25D366;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: var(--light);
+            color: var(--dark);
+            line-height: 1.6;
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+        }
+        
+        .logo {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        
+        .back-home {
+            display: inline-block;
+            color: white;
+            text-decoration: none;
+            margin-top: 1rem;
+            font-size: 1rem;
+        }
+        
+        .back-home:hover {
+            text-decoration: underline;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+        
+        .intro {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .intro h2 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+        
+        .panel-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+        
+        .panel-card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .panel-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+        
+        .panel-header {
+            background-color: var(--primary);
+            color: white;
+            padding: 1.5rem;
+            text-align: center;
+        }
+        
+        .panel-name {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .panel-price {
+            font-size: 1.8rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+        
+        .panel-features {
+            padding: 1.5rem;
+        }
+        
+        .features-list {
+            list-style: none;
+            margin-bottom: 1.5rem;
+        }
+        
+        .features-list li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            align-items: center;
+        }
+        
+        .features-list li:before {
+            content: "✓";
+            color: var(--success);
+            margin-right: 0.5rem;
+            font-weight: bold;
+        }
+        
+        .panel-badge {
+            display: inline-block;
+            background-color: var(--warning);
+            color: var(--dark);
+            padding: 0.3rem 0.8rem;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            margin: 0.2rem;
+        }
+        
+        .btn-whatsapp {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            background-color: var(--whatsapp);
+            color: white;
+            text-align: center;
+            padding: 0.8rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .btn-whatsapp:hover {
+            background-color: #128C7E;
+        }
+        
+        .btn-whatsapp i {
+            margin-right: 8px;
+            font-size: 1.2rem;
+        }
+        
+        .special-panels {
+            margin-top: 4rem;
+        }
+        
+        .special-panels h2 {
+            text-align: center;
+            color: var(--primary);
+            margin-bottom: 2rem;
+        }
+        
+        footer {
+            background-color: var(--dark);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+        
+        @media (max-width: 768px) {
+            .panel-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">KenzDevID</div>
+        <a href="https://mypanelkenz.my.id" class="back-home"><i class="fas fa-arrow-left"></i> Back To Home</a>
+    </header>
+    
+    <div class="container">
+        <section class="intro">
+            <h2>Panel Hosting</h2>
+            <p>Pilih paket hosting sesuai kebutuhan Anda. Semua server kami lancar, terjaga, aman, dan private.</p>
+        </section>
+        
+        <div class="panel-grid">
+            <!-- Panel 1GB -->
+            <div class="panel-card">
+                <div class="panel-header">
+                    <h3 class="panel-name">Panel 1 GB</h3>
+                    <div class="panel-price">Rp 1.000</div>
+                    <div>
+                        <span class="panel-badge">Lancar</span>
+                        <span class="panel-badge">Aman</span>
+                    </div>
+                </div>
+                <div class="panel-features">
+                    <ul class="features-list">
+                        <li>Kapasitas 1GB</li>
+                        <li>Untuk project kecil</li>
+                        <li>Kecepatan standar</li>
+                        <li>Backup mingguan</li>
+                    </ul>
+                    <a href="https://wa.me/6285194715198?text=Saya%20ingin%20memesan%20Panel%201%20GB" class="btn-whatsapp">
+                        <i class="fab fa-whatsapp"></i> Order via WhatsApp
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Panel 2GB -->
+            <div class="panel-card">
+                <div class="panel-header">
+                    <h3 class="panel-name">Panel 2 GB</h3>
+                    <div class="panel-price">Rp 2.000</div>
+                    <div>
+                        <span class="panel-badge">Lancar</span>
+                        <span class="panel-badge">Aman</span>
+                    </div>
+                </div>
+                <div class="panel-features">
+                    <ul class="features-list">
+                        <li>Kapasitas 2GB</li>
+                        <li>Untuk project kecil-menengah</li>
+                        <li>Kecepatan tinggi</li>
+                        <li>Backup mingguan</li>
+                    </ul>
+                    <a href="https://wa.me/6285194715198?text=Saya%20ingin%20memesan%20Panel%202%20GB" class="btn-whatsapp">
+                        <i class="fab fa-whatsapp"></i> Order via WhatsApp
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Panel 3GB -->
+            <div class="panel-card">
+                <div class="panel-header">
+                    <h3 class="panel-name">Panel 3 GB</h3>
+                    <div class="panel-price">Rp 3.000</div>
+                    <div>
+                        <span class="panel-badge">Lancar</span>
+                        <span class="panel-badge">Aman</span>
+                        <span class="panel-badge">Private</span>
+                    </div>
+                </div>
+                <div class="panel-features">
+                    <ul class="features-list">
+                        <li>Kapasitas 3GB</li>
+                        <li>Untuk project menengah</li>
+                        <li>Kecepatan premium</li>
+                        <li>Backup harian</li>
+                    </ul>
+                    <a href="https://wa.me/6285194715198?text=Saya%20ingin%20memesan%20Panel%203%20GB" class="btn-whatsapp">
+                        <i class="fab fa-whatsapp"></i> Order via WhatsApp
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Panel 4GB -->
+            <div class="panel-card">
+                <div class="panel-header">
+                    <h3 class="panel-name">Panel 4 GB</h3>
+                    <div class="panel-price">Rp 4.000</div>
+                    <div>
+                        <span class="panel-badge">Lancar</span>
+                        <span class="panel-badge">Aman</span>
+                        <span class="panel-badge">Private</span>
+                    </div>
+                </div>
+                <div class="panel-features">
+                    <ul class="features-list">
+                        <li>Kapasitas 4GB</li>
+                        <li>Untuk project menengah</li>
+                        <li>Kecepatan premium</li>
+                        <li>Backup harian</li>
+                    </ul>
+                    <a href="https://wa.me/6285194715198?text=Saya%20ingin%20memesan%20Panel%204%20GB" class="btn-whatsapp">
+                        <i class="fab fa-whatsapp"></i> Order via WhatsApp
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Panel 5GB -->
+            <div class="panel-card">
+                <div class="panel-header">
+                    <h3 class="panel-name">Panel 5 GB</h3>
+                    <div class="panel-price">Rp 5.000</div>
+                    <div>
+                        <span class="panel-badge">Lancar</span>
+                        <span class="panel-badge">Aman</span>
+                        <span class="panel-badge">Private</span>
+                    </div>
+                </div>
+                <div class="panel-features">
+                    <ul class="features-list">
+                        <li>Kapasitas 5GB</li>
+                        <li>Untuk project menengah-besar</li>
+                        <li>Kecepatan premium+</li>
+                        <li>Backup harian</li>
+                    </ul>
+                    <a href="https://wa.me/6285194715198?text=Saya%20ingin%20memesan%20Panel%205%20GB" class="btn-whatsapp">
+                        <i class="fab fa-whatsapp"></i> Order via WhatsApp
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Panel 10GB -->
+            <div class="panel-card">
+                <div class="panel-header">
+                    <h3 class="panel-name">Panel 10 GB</h3>
+                    <div class="panel-price">Rp 10.000</div>
+                    <div>
+                        <span class="panel-badge">Lancar</span>
+                        <span class="panel-badge">Aman</span>
+                        <span class="panel-badge">Private</span>
+                        <span class="panel-badge">VIP</span>
+                    </div>
+                </div>
+                <div class="panel-features">
+                    <ul class="features-list">
+                        <li>Kapasitas 10GB</li>
+                        <li>Untuk project besar</li>
+                        <li>Kecepatan enterprise</li>
+                        <li>Backup real-time</li>
+                        <li>Support prioritas</li>
+                    </ul>
+                    <a href="https://wa.me/6285194715198?text=Saya%20ingin%20memesan%20Panel%2010%20GB" class="btn-whatsapp">
+                        <i class="fab fa-whatsapp"></i> Order via WhatsApp
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Panel Unlimited -->
+            <div class="panel-card">
+                <div class="panel-header" style="background-color: var(--danger);">
+                    <h3 class="panel-name">Panel Unlimited</h3>
+                    <div class="panel-price">Rp 11.000</div>
+                    <div>
+                        <span class="panel-badge">Lancar</span>
+                        <span class="panel-badge">Aman</span>
+                        <span class="panel-badge">Private</span>
+                        <span class="panel-badge">VIP</span>
+                    </div>
+                </div>
+                <div class="panel-features">
+                    <ul class="features-list">
+                        <li>Kapasitas Unlimited</li>
+                        <li>Untuk project enterprise</li>
+                        <li>Kecepatan maksimal</li>
+                        <li>Backup real-time</li>
+                        <li>Support 24/7</li>
+                        <li>Dedicated resources</li>
+                    </ul>
+                    <a href="https://wa.me/6285194715198?text=Saya%20ingin%20memesan%20Panel%20Unlimited" class="btn-whatsapp" style="background-color: var(--danger);">
+                        <i class="fab fa-whatsapp"></i> Order via WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="special-panels">
+            <h2>Panel Khusus</h2>
+            <div class="panel-grid">
+                <!-- Reseller Panel -->
+                <div class="panel-card">
+                    <div class="panel-header" style="background-color: var(--success);">
+                        <h3 class="panel-name">Reseller Panel</h3>
+                        <div class="panel-price">Rp 13.000</div>
+                        <div>
+                            <span class="panel-badge">Multi User</span>
+                            <span class="panel-badge">Profit</span>
+                        </div>
+                    </div>
+                    <div class="panel-features">
+                        <ul class="features-list">
+                            <li>Buat Panel Dari 1GB - Unli</li>
+                            <li>Keuntungan 20-30%</li>
+                        </ul>
+                        <a href="https://wa.me/6285194715198?text=Saya%20ingin%20memesan%20Reseller%20Panel" class="btn-whatsapp" style="background-color: var(--success);">
+                            <i class="fab fa-whatsapp"></i> Order via WhatsApp
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Admin Panel -->
+                <div class="panel-card">
+                    <div class="panel-header" style="background-color: var(--dark);">
+                        <h3 class="panel-name">Admin Panel</h3>
+                        <div class="panel-price">Rp 15.000</div>
+                        <div>
+                            <span class="panel-badge">Full Access</span>
+                            <span class="panel-badge">Control</span>
+                        </div>
+                    </div>
+                    <div class="panel-features">
+                        <ul class="features-list">
+                            <li>Manajemen user</li>
+                            <li>Monitoring server</li>
+                            <li>Tools administrasi</li>
+                        </ul>
+                        <a href="https://wa.me/6285194715198?text=Saya%20ingin%20memesan%20Admin%20Panel" class="btn-whatsapp" style="background-color: var(--dark);">
+                            <i class="fab fa-whatsapp"></i> Order via WhatsApp
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- PT Panel -->
+                <div class="panel-card">
+                    <div class="panel-header" style="background-color: #8e44ad;">
+                        <h3 class="panel-name">PT Panel</h3>
+                        <div class="panel-price">Rp 18.000</div>
+                        <div>
+                            <span class="panel-badge">Corporate</span>
+                            <span class="panel-badge">Business</span>
+                        </div>
+                    </div>
+                    <div class="panel-features">
+                        <ul class="features-list">
+                            <li>Multiple admin</li>
+                            <li>Support khusus</li>
+                            <li>Enterprise features</li>
+                        </ul>
+                        <a href="https://wa.me/6285194715198?text=Saya%20ingin%20memesan%20PT%20Panel" class="btn-whatsapp" style="background-color: #8e44ad;">
+                            <i class="fab fa-whatsapp"></i> Order via WhatsApp
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Owner Panel -->
+                <div class="panel-card">
+                    <div class="panel-header" style="background-color: #e67e22;">
+                        <h3 class="panel-name">Owner Panel</h3>
+                        <div class="panel-price">Rp 20.000</div>
+                        <div>
+                            <span class="panel-badge">Ultimate</span>
+                            <span class="panel-badge">All Access</span>
+                        </div>
+                    </div>
+                    <div class="panel-features">
+                        <ul class="features-list">
+                            <li>Akses super admin</li>
+                            <li>Manajemen bisnis</li>
+                            <li>Laporan keuangan</li>
+                            <li>Priority support</li>
+                        </ul>
+                        <a href="https://wa.me/6285194715198?text=Saya%20ingin%20memesan%20Owner%20Panel" class="btn-whatsapp" style="background-color: #e67e22;">
+                            <i class="fab fa-whatsapp"></i> Order via WhatsApp
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Tangan Kanan/Kiri Panel -->
+                <div class="panel-card">
+                    <div class="panel-header" style="background-color: #16a085;">
+                        <h3 class="panel-name">Tangan Kanan/Kiri</h3>
+                        <div class="panel-price">Rp 25.000</div>
+                        <div>
+                            <span class="panel-badge">Assistant</span>
+                            <span class="panel-badge">Manager</span>
+                        </div>
+                    </div>
+                    <div class="panel-features">
+                        <ul class="features-list">
+                            <li>Hak akses khusus</li>
+                            <li>Manajemen terbatas</li>
+                            <li>Monitoring terpusat</li>
+                            <li>Support manager</li>
+                        </ul>
+                        <a href="https://wa.me/6285194715198?text=Saya%20ingin%20memesan%20Panel%20Tangan%20Kanan/Kiri" class="btn-whatsapp" style="background-color: #16a085;">
+                            <i class="fab fa-whatsapp"></i> Order via WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <p>&copy; 2023 KenzDevID. Hak Cipta Dilindungi.</p>
+    </footer>
+
+    <script>
+   
